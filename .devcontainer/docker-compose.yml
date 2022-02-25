@@ -29,11 +29,12 @@ services:
       -s "rootfs;/rootfs;no;no"
       -s "workspace;/workspace;no;no"
       -s "home;/root-home;no;no"
+      -g "vfs objects = catia fruit recycle"
     ports:
       - "139:139"
       - "1445:445"
     volumes:
-      - ..:/workspace:cached
+      - ..:/workspace
       - buildroot:/buildroot
       - rootfs:/rootfs
       - home:/root-home
