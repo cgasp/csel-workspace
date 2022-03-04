@@ -16,6 +16,18 @@
          "MIMode": "gdb",
          "miDebuggerServerAddress": "192.168.0.14:1234",
          "miDebuggerPath": "/buildroot/output/host/bin/aarch64-linux-gdb"
-       }
+       },
+       {
+        "name": "(gdb) debug Core Dumped",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/app",
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "/buildroot/output/host/bin/aarch64-linux-gdb",
+        "coreDumpPath": "${workspaceFolder}/core"
+      }
     ]
 }
