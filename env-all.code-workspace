@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "src/01_environment/backtrace"
+		},
+		{
+			"path": "src/01_environment/core_dumps"
+		},
+		{
+			"path": "src/01_environment/daemon"
+		},
+		{
+			"path": "src/01_environment/fibonacci"
+		},
+		{
+			"path": "src/01_environment/memory_leaks"
+		},
+		{
+			"path": "src/01_environment/process"
+		},
+		{
+			"path": "src/01_environment/system_calls"
+		},
+		{
+			"path": "src/01_environment/tracing"
+		}
+	],
+	"settings": {}
+}

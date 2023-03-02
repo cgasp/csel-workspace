@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"path": "."
 		},
 		{
-			"path": "../src/02_modules/exercice01"
+			"path": "src/02_modules/exercice01"
 		}
 	],
 	"settings": {
