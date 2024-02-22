@@ -8,7 +8,7 @@ set -o nounset
 git clone git://git.buildroot.net/buildroot /buildroot
 
 cd /buildroot
-git checkout -b csel 2021.11.1
+git checkout -b csel 2022.08.3
 
 rsync -a /workspace/config/board/ /buildroot/board/
 rsync -a /workspace/config/configs/ /buildroot/configs/
