@@ -21,7 +21,6 @@ if [[ -f $RSYNC_IGNORE ]]; then
     echo "Using rsyncignore"
 fi
 
-
 # Update all existing files in DST from SRC
 rsync -crlpgoD --itemize-changes \
   --exclude=/etc/ssh/** \
@@ -31,5 +30,4 @@ rsync -crlpgoD --itemize-changes \
   --exclude=/etc/shadow \
   --exclude=/etc/fstab \
   --exclude=THIS_IS_NOT_YOUR_ROOT_FILESYSTEM \
-  $RSYNC_OPT \
-  $SRC $DST
+  $RSYNC_OPT $SRC $DST
