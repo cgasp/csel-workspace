@@ -5,12 +5,24 @@ set -o pipefail
 set -o nounset
 # set -o xtrace
 
+SRC=/buildroot/output/target/
+DST=/rootfs/
+RSYNC_IGNORE=/workspace/rsyncignore
+
+# Copy all non-existing files from SRC to DST
 rsync -rlpgoD --itemize-changes \
   --ignore-existing \
   --exclude=THIS_IS_NOT_YOUR_ROOT_FILESYSTEM \
-  /buildroot/output/target/ \
-  /rootfs/
-  
+  $SRC $DST
+
+RSYNC_OPT=""
+if [[ -f $RSYNC_IGNORE ]]; then
+    RSYNC_OPT="--exclude-from=$RSYNC_IGNORE"
+    echo "Using rsyncignore"
+fi
+
+
+# Update all existing files in DST from SRC
 rsync -crlpgoD --itemize-changes \
   --exclude=/etc/ssh/** \
   --exclude=/etc/hostname \
@@ -19,5 +31,5 @@ rsync -crlpgoD --itemize-changes \
   --exclude=/etc/shadow \
   --exclude=/etc/fstab \
   --exclude=THIS_IS_NOT_YOUR_ROOT_FILESYSTEM \
-  /buildroot/output/target/ \
-  /rootfs/
+  $RSYNC_OPT \
+  $SRC $DST
