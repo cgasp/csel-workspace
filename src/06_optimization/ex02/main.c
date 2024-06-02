@@ -3,6 +3,7 @@
 
 #define SIZE 65536
 
+<<<<<<< HEAD
 static int compare(const void* a, const void* b)
 {
     return *(short*)a - *(short*)b;
@@ -27,4 +28,24 @@ int main()
         }
     }
     printf("sum=%lld\n", sum);
+=======
+int main()
+{
+ 	// generate data
+	short data[SIZE];
+	for (int i = 0; i < SIZE; i++) {
+		data[i] = rand() % 512;
+	}
+
+
+	long long sum = 0;
+	for (int j = 0; j < 10000; j++) {
+		for (int i = 0; i < SIZE; i++) {
+			if (data[i] >= 256) {
+				sum += data[i];
+			}
+		}
+	}
+	printf ("sum=%lld\n", sum);
+>>>>>>> 72cc4f3ca84b2ff8589571b2587b55e131fddb2a
 }

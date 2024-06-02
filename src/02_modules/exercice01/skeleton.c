@@ -29,4 +29,7 @@ MODULE_AUTHOR ("Daniel Gachet <daniel.gachet@hefr.ch>");
 MODULE_DESCRIPTION ("Module skeleton");
 MODULE_LICENSE ("GPL");
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 72cc4f3ca84b2ff8589571b2587b55e131fddb2a

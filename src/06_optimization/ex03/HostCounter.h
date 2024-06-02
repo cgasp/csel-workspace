@@ -1,7 +1,11 @@
 #include <string>
 
+<<<<<<< HEAD
 //#include <vector>
 #include <set>
+=======
+#include <vector>
+>>>>>>> 72cc4f3ca84b2ff8589571b2587b55e131fddb2a
 
 class HostCounter
 {
@@ -19,6 +23,10 @@ class HostCounter
         // check if host is already in the list
         bool isNewHost(std::string hostname);
 
+<<<<<<< HEAD
         //std::vector< std::string > myHosts;
         std::set< std::string > myHosts;
+=======
+        std::vector< std::string > myHosts;
+>>>>>>> 72cc4f3ca84b2ff8589571b2587b55e131fddb2a
 };

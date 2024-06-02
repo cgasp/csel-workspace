@@ -27,6 +27,9 @@ src/02_modules/procstat/procstat_s
 src/03_drivers/sample01/main1
 src/03_drivers/sample01/main2
 src/03_drivers/sample01/main3
+<<<<<<< HEAD
 
 # File src/06_optimization/ex03/perf.data is 471.66 MB; this exceeds GitHub's file size limit of 100.00 MB
 src/06_optimization/ex03/perf.data
+=======
+>>>>>>> 72cc4f3ca84b2ff8589571b2587b55e131fddb2a
