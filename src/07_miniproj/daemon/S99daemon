@@ -1,0 +1,27 @@
+#!/bin/sh
+# To be installed in /etc/init.d/ -> cmd: 
+# Usage: /etc/init.d/S99daemon {start|stop}
+#  
+
+case "$1" in
+    start)
+        echo "Starting daemon"
+        # app location
+        /workspace/src/07_miniproj/daemon/daemon &
+        ;;
+    stop)
+        echo "Stopping daemon"
+        killall daemon
+        ;;
+    status)
+        echo "Status daemon (PID)"
+        pgrep -lx daemon
+        ;;
+    *)
+        echo "Usage: /etc/init.d/S99daemon {start|stop}"
+        exit 1
+        ;;
+esac
+
+exit 0
+
